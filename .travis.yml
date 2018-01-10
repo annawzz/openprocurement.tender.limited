@@ -24,6 +24,6 @@ install:
   - bin/buildout -N
 script:
   - bin/nosetests
-  - bin/pylint --errors-only --disable=no-member,not-an-iterable,bad-super-call,unsubscriptable-object,too-many-format-args openprocurement.tender.limited
+  - bin/pep8 --max-line-length=120 openprocurement.tender.limited
 after_success:
   - bin/coveralls
