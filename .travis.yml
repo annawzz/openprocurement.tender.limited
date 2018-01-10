@@ -24,6 +24,6 @@ install:
   - bin/buildout -N
 script:
   - bin/nosetests
-  - bin/pep8 --max-line-length=120 openprocurement.tender.limited
-after_success:
+  - bin/flake8 openprocurement/tender/limited/ --ignore=E501
+after_script:
   - bin/coveralls
