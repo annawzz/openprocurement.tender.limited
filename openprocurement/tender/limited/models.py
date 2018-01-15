@@ -19,6 +19,7 @@ from openprocurement.api.models import Unit as BaseUnit
 from openprocurement.api.validation import (
     validate_cpv_group, validate_items_uniq
 )
+from datetime import datetime #  unused import! wrong import order
 from openprocurement.tender.core.models import (
     view_role, create_role, edit_role, enquiries_role, view_bid_role,
     Administrator_role, chronograph_role, chronograph_view_role,
@@ -34,6 +35,9 @@ from openprocurement.tender.openua.models import Complaint as BaseComplaint
 from openprocurement.tender.openua.models import Item
 from openprocurement.tender.openua.models import Tender as OpenUATender
 
+
+aaa = 'i am unused variable'
+print bbb # undefined
 
 class IReportingTender(ITender):
     """ Reporting Tender marker interface """
